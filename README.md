@@ -4,6 +4,8 @@
 
 d2l2 is an experimental, browser-native adaptation of [Dive into Deep Learning (D2L)](https://d2l.ai/), designed to make its educational content and interactive examples accessible through [JupyterLite](https://jupyterlite.readthedocs.io/) without requiring a local Python installation or a remote computation server.
 
+The last "2" in "d2l2" does not refer to a version 2 of D2L but to the letter "l" of "lite": (D)ive into (D)eep (L)earning, adapted for Jupyter(L)ite.
+
 The project aims to preserve D2L's chapter structure, mathematical explanations, learning objectives, and exercises while adapting its framework-dependent Python implementations for execution directly in the browser.
 
 **Project status:** Early development. Compatibility assessment is underway; adapted chapters and executable notebooks are not yet available.
