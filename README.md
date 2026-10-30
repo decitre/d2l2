@@ -1,3 +1,9 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/decitre/d2l2/main/logo.png"
+       alt="d2l2 — Dive into Deep Learning in JupyterLite"
+       width="600">
+</p>
+
 # d2l2
 
 **Dive into Deep Learning, adapted for JupyterLite.**
