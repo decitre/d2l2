@@ -1,0 +1,14 @@
+[project]
+name = "d2l2"
+version = "0.1.0"
+description = "Dive into Deep Learning, adapted for JupyterLite"
+# Pyodide kernel 0.7.0 runs Python 3.13; [project.dependencies] are what the browser kernels install.
+requires-python = ">=3.11"
+dependencies = ["numpy"]
+
+[dependency-groups]
+browser = ["pytest>=8", "playwright>=1.50"]
+test = ["pytest>=8", "nbclient>=0.10", "ipykernel>=6", "numpy"]
+
+[tool.setuptools]
+packages = []  # notebooks only: installing just brings in [project.dependencies]

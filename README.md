@@ -14,7 +14,7 @@ The last "2" in "d2l2" does not refer to a version 2 of D2L but to the letter "l
 
 The project aims to preserve D2L's chapter structure, mathematical explanations, learning objectives, and exercises while adapting its framework-dependent Python implementations for execution directly in the browser.
 
-**Project status:** Early development. Compatibility assessment is underway; adapted chapters and executable notebooks are not yet available.
+**Project status:** Early development. Compatibility assessment is underway. The first adapted chapter, [Data Manipulation](content/chapter_preliminaries/ndarray.ipynb), runs in JupyterLite with Pyodide and xeus-python; build the site locally with `./build.sh` (needs uv and micromamba).
 
 ## Motivation
 

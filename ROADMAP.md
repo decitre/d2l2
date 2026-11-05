@@ -9,7 +9,8 @@ Development will proceed incrementally, starting with a compatibility
 assessment and a small set of representative chapters.
 
 **Current status:** Early development. Static compatibility analysis has been
-performed, but no adapted chapters have yet been validated in JupyterLite.
+performed. The first adapted chapter, *Data Manipulation*, runs in JupyterLite
+with both the Pyodide and xeus-python kernels.
 
 ## Phase 1 — Compatibility Assessment
 
@@ -55,13 +56,19 @@ establish whether a chapter executes successfully in JupyterLite.
 
 ## Phase 2 — Initial Chapter Adaptations
 
-**Status: Planned**
+**Status: In progress**
 
 The first implementation phase will focus on three representative chapters.
 
 ### 1. Array Operations
 
 **Upstream source:** `chapter_preliminaries/ndarray.md`
+
+**Status:** Adapted as
+[`content/chapter_preliminaries/ndarray.ipynb`](content/chapter_preliminaries/ndarray.ipynb).
+Runs in CPython (`tests/test_notebooks.py`) and in JupyterLite with Pyodide
+and xeus-python (`tests/smoke_test.py`). Its header cell lists the upstream
+revision, attribution, licenses and changes.
 
 Objectives:
 
@@ -110,18 +117,19 @@ Each adapted chapter must:
 
 ## Phase 3 — JupyterLite Infrastructure
 
-**Status: Planned**
+**Status: In progress**
 
 Establish a reproducible browser-native learning environment.
 
 ### Tasks
 
-- [ ] Configure a JupyterLite distribution for d2l2.
-- [ ] Integrate the Pyodide kernel.
-- [ ] Integrate the xeus-python kernel.
+- [x] Configure a JupyterLite distribution for d2l2.
+- [x] Integrate the Pyodide kernel.
+- [x] Integrate the xeus-python kernel.
 - [ ] Establish dependency and package-management conventions.
 - [ ] Define dataset-loading and caching strategies.
-- [ ] Provide a reproducible local build process.
+- [x] Provide a reproducible local build process (`build.sh`, using
+      [jl-forge](https://github.com/decitre/jl-forge)).
 - [ ] Publish a browser-accessible demonstration.
 - [ ] Document browser and runtime limitations.
 
