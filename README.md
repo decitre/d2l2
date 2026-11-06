@@ -13,18 +13,19 @@
 
 **Dive into Deep Learning, adapted for JupyterLite.**
 
-d2l2 is an experimental, browser-native adaptation of [Dive into Deep Learning (D2L)](https://d2l.ai/), designed to make its educational content and interactive examples accessible through [JupyterLite](https://jupyterlite.readthedocs.io/) without requiring a local Python installation or a remote computation server.
+d2l2 is an experimental, browser-native adaptation of [Dive into Deep Learning (D2L)][d2l-site], designed to make its educational content and interactive examples accessible through [JupyterLite][jupyterlite] without requiring a local Python installation or a remote computation server.
 
 The last "2" in "d2l2" does not refer to a version 2 of D2L but to the letter "l" of "lite": (D)ive into (D)eep (L)earning, adapted for Jupyter(L)ite.
 
 The project aims to preserve D2L's chapter structure, mathematical explanations, learning objectives, and exercises while adapting its framework-dependent Python implementations for execution directly in the browser.
 
-**Project status:** Early development. Compatibility assessment is underway. Adapted sections run in the browser with no installation ([all notebooks](https://decitre.github.io/d2l2/)):
+**Project status:** Early development. Compatibility assessment is underway. Adapted sections run in the browser with no installation ([all notebooks][site]):
 
-| Section | Run with | | Source |
-|---|---|---|---|
-| Data Manipulation | [xeus-python](https://decitre.github.io/d2l2/xeus/lab/index.html?path=02_preliminaries/02.01_ndarray.ipynb) | [Pyodide](https://decitre.github.io/d2l2/pyodide/lab/index.html?path=02_preliminaries/02.01_ndarray.ipynb) | [notebook](content/02_preliminaries/02.01_ndarray.ipynb) |
-| Synthetic Regression Data | [xeus-python](https://decitre.github.io/d2l2/xeus/lab/index.html?path=03_linear-regression/03.03_synthetic-regression-data.ipynb) | [Pyodide](https://decitre.github.io/d2l2/pyodide/lab/index.html?path=03_linear-regression/03.03_synthetic-regression-data.ipynb) | [notebook](content/03_linear-regression/03.03_synthetic-regression-data.ipynb) |
+| Section | Run with | | Source | D2L original |
+|---|---|---|---|---|
+| 1 Introduction | — | — | no code, read the original | [d2l.ai][d2l-1] |
+| 2.1 Data Manipulation | [xeus-python][xeus-url] | [Pyodide][pyodide-url] | [notebook][nb-2.1] | [d2l.ai][d2l-2.1] |
+| 3.3 Synthetic Regression Data | [xeus-python][xeus-3.3] | [Pyodide][pyodide-3.3] | [notebook][nb-3.3] | [d2l.ai][d2l-3.3] |
 
 Build the site locally with `./build.sh` (needs uv and micromamba).
 
@@ -70,7 +71,7 @@ The goal is to preserve the concepts being taught rather than provide identical 
 
 ### Transformers.js and lmLite
 
-For selected chapters involving modern language models or inference, d2l2 may explore integration with [Transformers.js](https://huggingface.co/docs/transformers.js/) through [lmLite](https://github.com/decitre/lmlite).
+For selected chapters involving modern language models or inference, d2l2 may explore integration with [Transformers.js][transformers-js] through [lmLite][lmlite].
 
 lmLite provides Python access to browser-native machine learning inference.
 
@@ -96,25 +97,25 @@ The initial audit references D2L commit:
 
 ## Initial Development Plan
 
-The first phase will focus on three representative D2L chapters:
+The first phase focuses on three representative D2L sections:
 
-| Chapter | Focus |
-|---|---|
-| `chapter_preliminaries/ndarray.md` | Array operations and tensor fundamentals |
-| `chapter_linear-regression/synthetic-regression-data.md` | Synthetic datasets and numerical computation |
-| `chapter_attention-mechanisms-and-transformers/attention-scoring-functions.md` | Attention mechanisms and scoring functions |
+| Section | Focus | Status |
+|---|---|---|
+| 2.1 `chapter_preliminaries/ndarray.md` | Array operations and tensor fundamentals | Adapted |
+| 3.3 `chapter_linear-regression/synthetic-regression-data.md` | Synthetic datasets and numerical computation | Adapted |
+| 11.3 `chapter_attention-mechanisms-and-transformers/attention-scoring-functions.md` | Attention mechanisms and scoring functions | Planned |
 
-The PyTorch implementations will serve as the primary reference.
+The PyTorch implementations serve as the primary reference.
 
 Each adaptation will be reviewed for educational fidelity, browser compatibility, dependencies, and reproducibility.
 
 The project will progressively expand to additional chapters based on the results of these initial experiments.
 
-See [ROADMAP.md](ROADMAP.md) for further details.
+See [ROADMAP.md][roadmap] for further details.
 
 ## Relationship to Dive into Deep Learning
 
-d2l2 is an independent adaptation of the original [Dive into Deep Learning](https://github.com/d2l-ai/d2l-en) project.
+d2l2 is an independent adaptation of the original [Dive into Deep Learning][d2l-repo] project.
 
 It is not an official D2L edition and is not affiliated with or endorsed by the original authors.
 
@@ -124,13 +125,13 @@ Adapted chapters will identify their original sources and document substantive m
 
 ## License and Attribution
 
-The original Dive into Deep Learning book content is distributed under the [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
+The original Dive into Deep Learning book content is distributed under the [Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa].
 
 Adapted educational content derived from D2L will retain the applicable attribution and ShareAlike requirements.
 
 Source code and third-party materials may be subject to separate licenses. These will be reviewed and their required notices preserved before redistribution.
 
-See [CONTENT-LICENSE.md](CONTENT-LICENSE.md) and [NOTICE.md](NOTICE.md) for licensing and attribution details.
+See [CONTENT-LICENSE.md][license-url] and [NOTICE.md][notice] for licensing and attribution details.
 
 ## Feedback and Contributions
 
@@ -143,7 +144,7 @@ Feedback is particularly welcome on:
 - JupyterLite compatibility, performance, and runtime limitations.
 - Opportunities for browser-native machine learning beyond traditional Python frameworks.
 
-Please share suggestions, bug reports, and use cases through [GitHub Issues](https://github.com/decitre/d2l2/issues).
+Please share suggestions, bug reports, and use cases through [GitHub Issues][issues].
 
 [ci-badge]: https://github.com/decitre/d2l2/actions/workflows/build.yml/badge.svg
 [ci-url]: https://github.com/decitre/d2l2/actions/workflows/build.yml
@@ -153,3 +154,20 @@ Please share suggestions, bug reports, and use cases through [GitHub Issues](htt
 [pyodide-badge]: https://img.shields.io/badge/try-Pyodide-f7dc1e.svg?logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2OCIgaGVpZ2h0PSI2OCIgdmlld0JveD0iMCAwIDE3Ljk5MiAxNy45OTIiPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKC40NiAuNDQ4KSI+PGNpcmNsZSBjeD0iODMuNzI3IiBjeT0iODUuNjMzIiByPSI2LjU5OCIgc3R5bGU9ImZpbGw6I2Y3ZGMxZTtzdHJva2U6bm9uZTtzdHJva2Utd2lkdGg6LjI2NDU4MzMyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNzUuMTkxIC03OS4wMjUpIi8+PHJlY3Qgd2lkdGg9IjUuNjUzIiBoZWlnaHQ9IjEuMDEiIHg9IjgwLjgzMSIgeT0iOTIuMzQ0IiByeD0iLjQxMyIgcnk9Ii40MTMiIHN0eWxlPSJmaWxsOiNmOWY5Zjk7c3Ryb2tlOm5vbmU7c3Ryb2tlLXdpZHRoOjEuOTk5OTk5ODgiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC03NS4xOTEgLTc5LjAyNSkiLz48cmVjdCB3aWR0aD0iNS42NDEiIGhlaWdodD0iMS4wMzEiIHg9IjgwLjgzNyIgeT0iOTMuNjcxIiByeD0iLjQyMSIgcnk9Ii40MjEiIHN0eWxlPSJmaWxsOiNmOWY5Zjk7c3Ryb2tlOm5vbmU7c3Ryb2tlLXdpZHRoOjEuOTk5OTk5NzYiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC03NS4xOTEgLTc5LjAyNSkiLz48cmVjdCB3aWR0aD0iMy4yNCIgaGVpZ2h0PSIxLjAyIiB4PSI4Mi4wMzgiIHk9Ijk1LjAxOSIgcng9Ii40MTciIHJ5PSIuNDE3IiBzdHlsZT0iZmlsbDojZjlmOWY5O3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDoxLjk5OTk5OTg4IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNzUuMTkxIC03OS4wMjUpIi8+PGcgc3R5bGU9ImZpbGw6IzFhMWExYSI+PGcgc3R5bGU9ImZpbGw6IzFhMWExYTtzdHJva2Utd2lkdGg6LjI2NDU4MzM1Ij48cGF0aCBkPSJNODcuMDY1IDkwLjI4OXEtLjk5Ni0uMDQxLTEuNDc1LTEuMjE2LS4zNTYtLjg4NC0uMzU2LTIuMTY2IDAtLjA2Ni4wMDgtLjE3LjA1OC0uODcyLjMyMy0xLjYuNDMtMS4xNzMgMS4yMTUtMS4xNzMuMDQyIDAgLjA4Ny4wMDQuNzE1LjA0NS43MTUuODMgMCAuODU3LS43MzYgMS45MDItLjQ2Ny42NjYtLjk4IDEuMDguMTQxLjc4NS4zMSAxLjE3OC4zMTUuNzI3LjkzNS43MjcuMDQxIDAgLjA4Ny0uMDA4LjEzNi0uMDI1LjM4LS4xOTguMjM2LS4xNjIuMzY4LS4xNjIuMDU4IDAgLjExMi4wMzguMTIuMDgyLjEyLjIyMy0uMDA5LjIxNS0uMzA2LjQ0Mi0uMzcyLjI2OS0uODA3LjI2OXptLS4yOC01LjcwMXEtLjI0NS4wMDQtLjQzLjIxLS40NzIuNTM0LS41MTcgMi4yMy4yNDgtLjI1My40OTYtLjU5Ni42ODYtLjkzOS42ODYtMS41ODQgMC0uMDMzLS4wMTctLjA3OC0uMDY2LS4xODItLjIxOS0uMTgyeiIgYXJpYS1sYWJlbD0ibCIgc3R5bGU9ImZpbGw6IzFhMWExYTtzdHJva2Utd2lkdGg6LjI2NDU4MzM1IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNzYuNDA5IC03OS40NzMpIi8+PC9nPjxwYXRoIGQ9Ik04NC45OTggODMuNjYzYS42OTQuNjk0IDAgMCAxLS42OTQuNjk1LjY5NC42OTQgMCAwIDEtLjY5NC0uNjk1LjY5NC42OTQgMCAwIDEgLjY5NC0uNjk0LjY5NC42OTQgMCAwIDEgLjY5NC42OTR6IiBzdHlsZT0iZmlsbDojMWExYTFhO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDouMjY0NTgzMzIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC03Ni40MDkgLTc5LjQ3MykiLz48ZyBzdHlsZT0iZmlsbDojMWExYTFhO3N0cm9rZS13aWR0aDouMjY0NTgzMzUiPjxwYXRoIGQ9Ik04NC4xNTUgODQuNjY3cS4yNjkuMDA0LjI3Ny4zNWwtLjQ1OSAzLjI4M3ExLjAzNC0uNzkgMS4xNjItLjg5My4xNTMtLjEzMi4zMTQtLjEzNi4wNTggMCAuMTEyLjAzNy4xMi4wODMuMTIuMjExLS4wMDUuMTk5LS4yMjQuMzg1LS42MDcuNTEyLTEuNjA4IDEuMjZsLS4xOSAxLjM2OXEtLjAxMi4wOTUtLjAzNy4xODYtLjE5LjcyNy0uOTU1LjcyNy0uMzggMC0uNjctLjI4NS0uMjg1LS4yODUtLjI4NS0uNjQgMC0uMzczLjE3OC0uNjEyLjA5OS0uMTI0LjM4OC0uMzRsLjk5Mi0uNzQ0cS41MjUtMy40NjguNTM4LTMuNjQ2IDAtLjAyNS4wMDQtLjA0NS4wNDUtLjQ2Ny4zNDMtLjQ2N3ptLTEuMDg3IDUuNTM1LjA3LS41MDQtLjQ1OS4zNTFxLS4yOTguMjIzLS4zMDIuNDIyIDAgLjA3LjAyNS4xMzIuMDcuMTgyLjI2NS4xODIuMDc4IDAgLjE0LS4wMjUuMTk5LS4wODcuMjYtLjU1OHptLjg5Ny02LjMyNXEwLS4wNzQuMDM3LS4xNC4wODctLjE2Mi4yNjktLjE2Mi4wNzQgMCAuMTQ0LjAzNy4xNTguMDg3LjE1OC4yNjUgMCAuMDc0LS4wMzguMTQ1LS4wODYuMTU3LS4yNjQuMTU3LS4wNzUgMC0uMTQ1LS4wMzgtLjE2MS0uMDgyLS4xNjEtLjI2NHoiIGFyaWEtbGFiZWw9ImoiIHN0eWxlPSJmaWxsOiMxYTFhMWE7c3Ryb2tlLXdpZHRoOi4yNjQ1ODMzNSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTc2LjQwOSAtNzkuNDczKSIvPjwvZz48L2c+PC9nPjwvc3ZnPiA=
 [license-badge]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
 [license-url]: CONTENT-LICENSE.md
+[d2l-site]: https://d2l.ai/
+[jupyterlite]: https://jupyterlite.readthedocs.io/
+[site]: https://decitre.github.io/d2l2/
+[d2l-1]: https://d2l.ai/chapter_introduction/index.html
+[nb-2.1]: content/02_preliminaries/02.01_ndarray.ipynb
+[d2l-2.1]: https://d2l.ai/chapter_preliminaries/ndarray.html
+[xeus-3.3]: https://decitre.github.io/d2l2/xeus/lab/index.html?path=03_linear-regression/03.03_synthetic-regression-data.ipynb
+[pyodide-3.3]: https://decitre.github.io/d2l2/pyodide/lab/index.html?path=03_linear-regression/03.03_synthetic-regression-data.ipynb
+[nb-3.3]: content/03_linear-regression/03.03_synthetic-regression-data.ipynb
+[d2l-3.3]: https://d2l.ai/chapter_linear-regression/synthetic-regression-data.html
+[transformers-js]: https://huggingface.co/docs/transformers.js/
+[lmlite]: https://github.com/decitre/lmlite
+[roadmap]: ROADMAP.md
+[d2l-repo]: https://github.com/d2l-ai/d2l-en
+[cc-by-sa]: https://creativecommons.org/licenses/by-sa/4.0/
+[notice]: NOTICE.md
+[issues]: https://github.com/decitre/d2l2/issues
