@@ -9,8 +9,10 @@ Development will proceed incrementally, starting with a compatibility
 assessment and a small set of representative chapters.
 
 **Current status:** Early development. Static compatibility analysis has been
-performed. The first adapted chapter, *Data Manipulation*, runs in JupyterLite
-with both the Pyodide and xeus-python kernels.
+performed. Two sections are adapted, 2.1 *Data Manipulation* and 3.3
+*Synthetic Regression Data*. They run in JupyterLite with both the Pyodide and
+xeus-python kernels, on the site published at <https://decitre.github.io/d2l2/>.
+GitHub Actions tests, builds and deploys the site on every push to `main`.
 
 ## Phase 1 — Compatibility Assessment
 
@@ -58,9 +60,9 @@ establish whether a chapter executes successfully in JupyterLite.
 
 **Status: In progress**
 
-The first implementation phase will focus on three representative chapters.
+The first implementation phase focuses on three representative sections.
 
-### 1. Array Operations
+### 1. Array Operations (2.1)
 
 **Upstream source:** `chapter_preliminaries/ndarray.md`
 
@@ -77,7 +79,7 @@ Objectives:
 - Preserve the original mathematical explanations and exercises.
 - Validate execution in browser-native Python environments.
 
-### 2. Synthetic Regression Data
+### 2. Synthetic Regression Data (3.3)
 
 **Upstream source:** `chapter_linear-regression/synthetic-regression-data.md`
 
@@ -96,10 +98,12 @@ Objectives:
 - Evaluate numerical reproducibility.
 - Adapt random-number generation and data-handling operations as needed.
 
-### 3. Attention Scoring Functions
+### 3. Attention Scoring Functions (11.3)
 
 **Upstream source:**
 `chapter_attention-mechanisms-and-transformers/attention-scoring-functions.md`
+
+**Status:** Planned.
 
 Objectives:
 
@@ -138,7 +142,8 @@ Establish a reproducible browser-native learning environment.
 - [ ] Define dataset-loading and caching strategies.
 - [x] Provide a reproducible local build process (`build.sh`, using
       [jl-forge](https://github.com/decitre/jl-forge)).
-- [ ] Publish a browser-accessible demonstration.
+- [x] Publish a browser-accessible demonstration
+      (<https://decitre.github.io/d2l2/>, deployed by GitHub Actions).
 - [ ] Document browser and runtime limitations.
 
 Pyodide and xeus-python will be evaluated separately. Compatibility with one
@@ -146,7 +151,7 @@ runtime does not imply compatibility with the other.
 
 ## Phase 4 — Automated Validation
 
-**Status: Planned**
+**Status: In progress**
 
 Introduce automated testing to verify that adapted notebooks remain
 executable and educationally consistent.
@@ -155,9 +160,14 @@ executable and educationally consistent.
 
 - [ ] Add tests for numerical correctness.
 - [ ] Validate representative notebook outputs.
-- [ ] Introduce browser-based execution tests.
-- [ ] Integrate tests into GitHub Actions.
-- [ ] Track compatibility separately for Pyodide and xeus-python.
+- [x] Introduce browser-based execution tests (`tests/smoke_test.py`: every
+      notebook runs in both kernels, with no request to other hosts and no
+      browser console error).
+- [x] Integrate tests into GitHub Actions (`tests/test_d2l2.py` and
+      `tests/test_notebooks.py` in CPython, then the browser smoke test on the
+      built site, before deploying).
+- [x] Track compatibility separately for Pyodide and xeus-python (the smoke
+      test runs each notebook on each site and checks the site's kernel).
 - [ ] Document known failures and unsupported features.
 
 Where possible, tests should verify mathematical properties rather than
@@ -229,6 +239,19 @@ original D2L authors or maintainers.
 
 See [NOTICE.md](NOTICE.md) and [CONTENT-LICENSE.md](CONTENT-LICENSE.md)
 for attribution and licensing information.
+
+### Outreach
+
+Present d2l2 to the D2L maintainers and readers once there is enough to show:
+at least Chapter 2 (Preliminaries) adapted, the upstream code licenses verified
+(Phase 1), and the site published.
+
+- [ ] Open an issue on `d2l-ai/d2l-en` presenting d2l2 to the maintainers:
+  what it is, that it is independent and unendorsed, and how it attributes D2L.
+  Ask whether they would welcome a link from the book.
+- [ ] Reply in the [D2L forum](https://discuss.d2l.ai/c/english-version/5)
+  thread of each adapted section with a link to its d2l2 notebook, rather than
+  opening a new topic.
 
 ## Feedback
 
