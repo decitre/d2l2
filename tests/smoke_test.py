@@ -23,8 +23,8 @@ PUBLIC = ROOT / "workspace" / "public"
 NOTEBOOKS = sorted(p.relative_to(ROOT / "content").as_posix() for p in (ROOT / "content").rglob("*.ipynb"))
 KERNEL_START_MS = 240_000  # first load downloads the kernel and its packages
 RUN_MS = 120_000
-# runtime-check.ipynb prints which kernel runs it.
-REPORT = re.compile(r"(xeus-python|pyodide) on emscripten, Python 3\.\d+\.\d+, NumPy \d+\.\d+")
+# The kernel name each site's toolbar shows: catches a site built with the other kernel.
+KERNEL_NAMES = {"xeus": "(XPython)", "pyodide": "(Pyodide)"}
 CASES = [(site, app, nb) for site in ("xeus", "pyodide") for app in ("lab", "notebooks") for nb in NOTEBOOKS]
 
 
@@ -72,8 +72,7 @@ def test_notebook(browser, base_url, site, app, notebook):
     last_ran = page.locator(".jp-CodeCell .jp-InputPrompt").last.filter(has_text=re.compile(r"\[\d+\]"))
     last_ran.or_(errors.first).wait_for(timeout=KERNEL_START_MS + RUN_MS)
     assert errors.count() == 0, errors.all_inner_texts()
-    if notebook == "runtime-check.ipynb":
-        assert REPORT.search(page.inner_text("body")).group(1) == site.replace("xeus", "xeus-python")
+    assert KERNEL_NAMES[site] in page.locator(".jp-Toolbar-kernelName").first.inner_text()
 
     # Self-hosted: no other host, and no file missing from the site (how a pruned Pyodide package shows up).
     assert {urlparse(u).netloc for u, _ in responses if not u.startswith(base_url)} == set()
