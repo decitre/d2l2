@@ -65,7 +65,7 @@ The first implementation phase will focus on three representative chapters.
 **Upstream source:** `chapter_preliminaries/ndarray.md`
 
 **Status:** Adapted as
-[`content/chapter_preliminaries/ndarray.ipynb`](content/chapter_preliminaries/ndarray.ipynb).
+[`content/02_preliminaries/02.01_ndarray.ipynb`](content/02_preliminaries/02.01_ndarray.ipynb).
 Runs in CPython (`tests/test_notebooks.py`) and in JupyterLite with Pyodide
 and xeus-python (`tests/smoke_test.py`). Its header cell lists the upstream
 revision, attribution, licenses and changes.
@@ -82,7 +82,7 @@ Objectives:
 **Upstream source:** `chapter_linear-regression/synthetic-regression-data.md`
 
 **Status:** Adapted as
-[`content/chapter_linear-regression/synthetic-regression-data.ipynb`](content/chapter_linear-regression/synthetic-regression-data.ipynb),
+[`content/03_linear-regression/03.03_synthetic-regression-data.ipynb`](content/03_linear-regression/03.03_synthetic-regression-data.ipynb),
 validated like *Array Operations*. It introduces the `d2l2` package
 ([`src/d2l2`](src/d2l2/__init__.py)), d2l2's NumPy counterpart of the `d2l`
 library: `DataModule`, `save_hyperparameters` and `add_to_class` from D2L,
