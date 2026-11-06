@@ -54,8 +54,12 @@ def browser():
 @pytest.mark.parametrize(("site", "app", "notebook"), CASES, ids=[f"{s}-{a}-{Path(n).stem}" for s, a, n in CASES])
 def test_notebook(browser, base_url, site, app, notebook):
     page = browser.new_page()
-    responses = []
+    responses, console_errors = [], []
     page.on("response", lambda r: responses.append((r.url, r.status)))
+    # The kernel's own fetches run in a web worker; their failures show up here, not always as responses.
+    # The browser's own /favicon.ico request at the server root is outside the site.
+    page.on("console", lambda m: console_errors.append(m.text)
+            if m.type == "error" and not m.location.get("url", "").endswith("/favicon.ico") else None)
     page.goto(f"{base_url}/{site}/{app}/index.html?path={notebook}")
     page.wait_for_selector(".jp-CodeCell", timeout=KERNEL_START_MS)
     page.click("li.lm-MenuBar-item:has-text('Run')")
@@ -74,4 +78,5 @@ def test_notebook(browser, base_url, site, app, notebook):
     # Self-hosted: no other host, and no file missing from the site (how a pruned Pyodide package shows up).
     assert {urlparse(u).netloc for u, _ in responses if not u.startswith(base_url)} == set()
     assert not [(u, s) for u, s in responses if u.startswith(base_url) and s >= 400]
+    assert not console_errors
     page.close()

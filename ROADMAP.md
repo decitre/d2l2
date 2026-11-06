@@ -81,6 +81,14 @@ Objectives:
 
 **Upstream source:** `chapter_linear-regression/synthetic-regression-data.md`
 
+**Status:** Adapted as
+[`content/chapter_linear-regression/synthetic-regression-data.ipynb`](content/chapter_linear-regression/synthetic-regression-data.ipynb),
+validated like *Array Operations*. It introduces the `d2l2` package
+([`src/d2l2`](src/d2l2/__init__.py)), d2l2's NumPy counterpart of the `d2l`
+library: `DataModule`, `save_hyperparameters` and `add_to_class` from D2L,
+and `ArrayLoader` in place of a framework's data loader. As in the original,
+the data are unseeded and differ between runs.
+
 Objectives:
 
 - Generate synthetic datasets using NumPy.
