@@ -38,7 +38,7 @@ pip install divelet-ml
 import divelet_ml as d2l
 ```
 
-It provides `add_to_class`, `HyperParameters` and `DataModule`, adapted from D2L's `d2l/torch.py`. The package grows only as adapted chapters need more of it. Its code is licensed under the Apache License 2.0; the notebooks are not part of the package.
+It provides `add_to_class`, `HyperParameters` and `DataModule`, adapted from D2L's `d2l/torch.py`, and `ArrayLoader`, which yields minibatches of NumPy arrays in place of PyTorch's `DataLoader`. The package grows only as adapted chapters need more of it. Its code is licensed under the Apache License 2.0; the notebooks are not part of the package.
 
 ## Motivation
 
@@ -157,7 +157,7 @@ Feedback is particularly welcome on:
 - JupyterLite compatibility, performance, and runtime limitations.
 - Opportunities for browser-native machine learning beyond traditional Python frameworks.
 
-Please share suggestions, bug reports, and use cases through [GitHub Issues][issues].
+Please share suggestions, bug reports, and use cases through [GitHub Issues][issues]. To set up a development environment, run the tests or make a release, see [CONTRIBUTING.md][contributing].
 
 [ci-badge]: https://github.com/decitre/divelet-ml/actions/workflows/build.yml/badge.svg
 [ci-url]: https://github.com/decitre/divelet-ml/actions/workflows/build.yml
@@ -185,4 +185,5 @@ Please share suggestions, bug reports, and use cases through [GitHub Issues][iss
 [cc-by-sa]: https://creativecommons.org/licenses/by-sa/4.0/
 [notice]: https://github.com/decitre/divelet-ml/blob/main/NOTICE.md
 [issues]: https://github.com/decitre/divelet-ml/issues
+[contributing]: https://github.com/decitre/divelet-ml/blob/main/CONTRIBUTING.md
 [apache]: https://github.com/decitre/divelet-ml/blob/main/LICENSE
