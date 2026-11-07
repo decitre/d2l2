@@ -3,3 +3,5 @@
 workspace/
 __pycache__/
 *.egg-info/
+# Logo, kept locally until the project name is settled
+d2l2.svg

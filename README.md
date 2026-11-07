@@ -1,9 +1,3 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/decitre/d2l2/main/d2l2.svg"
-       alt="d2l2 — Dive into Deep Learning in JupyterLite"
-       width="600">
-</p>
-
 [![Build site][ci-badge]][ci-url]
 [![Try xeus-python][xeus-badge]][xeus-url]
 [![Try Pyodide][pyodide-badge]][pyodide-url]

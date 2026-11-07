@@ -34,7 +34,7 @@ The adapted sections are listed in the README and published at https://decitre.g
 
 ## Attribution of Adapted Chapters
 
-The notebook of each adapted section opens with a header cell that provides:
+The notebook of each adapted section opens with a one-line credit and ends with an "Attribution and changes" section that provides:
 
 1. A reference to the corresponding original D2L chapter.
 2. Identification of the upstream source revision.

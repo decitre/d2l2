@@ -69,8 +69,8 @@ The first implementation phase focuses on three representative sections.
 **Status:** Adapted as
 [`content/02_preliminaries/02.01_ndarray.ipynb`](content/02_preliminaries/02.01_ndarray.ipynb).
 Runs in CPython (`tests/test_notebooks.py`) and in JupyterLite with Pyodide
-and xeus-python (`tests/smoke_test.py`). Its header cell lists the upstream
-revision, attribution, licenses and changes.
+and xeus-python (`tests/smoke_test.py`). Its closing "Attribution and changes"
+section lists the upstream revision, attribution, licenses and changes.
 
 Objectives:
 
