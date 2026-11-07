@@ -145,8 +145,6 @@ Adapted educational content derived from the book will retain the applicable att
 
 divelet-ml's own source code (the `divelet_ml` package, build scripts and tests) is licensed under the [Apache License 2.0][apache]. Third-party materials may be subject to separate licenses; these will be reviewed and their required notices preserved before redistribution.
 
-The divelet-ml name and logo (`divelet-ml.svg`) are not covered by the Apache License 2.0 or CC BY-SA 4.0. © 2026 Emmanuel Decitre. All rights reserved. You may use the unmodified logo to refer to the divelet-ml project.
-
 See [CONTENT-LICENSE.md][license-url] and [NOTICE.md][notice] for licensing and attribution details.
 
 ## Feedback and Contributions
