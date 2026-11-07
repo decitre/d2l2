@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 360" role="img" aria-labelledby="title desc">
+  <title id="title">d2l2 — mobile browser learning</title>
+  <desc id="desc">An open book behind a mobile notebook and headphones, next to the d2l2 wordmark.</desc>
+
+  <rect width="880" height="360" fill="#fff"/>
+
+  <!-- Open book -->
+  <g fill="none" stroke="#628eb3" stroke-width="15"
+     stroke-linejoin="round" stroke-linecap="round">
+    <path d="M38 93 Q94 67 151 103 L151 279 Q91 246 38 273 Z"
+          fill="#dbe9f3"/>
+    <path d="M151 103 Q204 67 261 93 L261 273 Q205 246 151 279 Z"
+          fill="#c4d9e9"/>
+  </g>
+
+  <!-- Headphones -->
+  <path d="M125 95 C125 14 289 12 289 119"
+        fill="none" stroke="#203748" stroke-width="17"
+        stroke-linecap="round"/>
+  <rect x="278" y="156" width="25" height="66"
+        rx="12" fill="#203748"/>
+
+  <!-- Mobile device -->
+  <rect x="113" y="100" width="157" height="228"
+        rx="25" fill="#203748"/>
+  <rect x="127" y="132" width="129" height="164"
+        rx="7" fill="#fff"/>
+  <rect x="169" y="115" width="46" height="5"
+        rx="2.5" fill="#fff"/>
+  <circle cx="192" cy="311" r="7" fill="#fff"/>
+
+  <!-- Notebook interface -->
+  <text x="139" y="165" font-family="monospace"
+        font-weight="700" font-size="18"
+        fill="#245e89">In [ ]:</text>
+
+  <!-- Learning curve -->
+  <path d="M145 237 L145 187 M145 237 L240 237"
+        fill="none" stroke="#6a9bbd" stroke-width="4"
+        stroke-linecap="round"/>
+  <path d="M146 229 C166 213 169 198 187 211 S212 222 225 199 S239 198 242 197"
+        fill="none" stroke="#246b9f" stroke-width="4"
+        stroke-linecap="round"/>
+
+  <!-- Notebook text -->
+  <path d="M149 257 H231 M149 271 H211"
+        stroke="#91b2c9" stroke-width="6"
+        stroke-linecap="round"/>
+
+  <!-- Wordmark -->
+  <text x="349" y="226" textLength="490" lengthAdjust="spacingAndGlyphs"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="260" font-weight="750"
+        letter-spacing="-10" fill="#203748">d2l<tspan fill="#2f75ae">2</tspan></text>
+
+  <!-- Subtitle -->
+  <text x="349" y="276"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="27" textLength="490" lengthAdjust="spacingAndGlyphs" fill="#203748">Dive into Deep Learning with JupyterLite</text>
+</svg>

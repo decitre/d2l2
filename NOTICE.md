@@ -22,7 +22,7 @@ https://github.com/d2l-ai/d2l-en/commit/23d7a5aecceee57d1292c56e90cce307f183bb0a
 
 The project aims to preserve the original book's educational structure, mathematical explanations, learning objectives, and exercises while adapting framework-dependent implementations for execution in browser-native Python environments.
 
-Planned modifications include:
+Modifications, which vary between chapters, include:
 
 - Replacing selected framework-specific implementations with NumPy or other browser-compatible alternatives.
 - Adapting code examples for JupyterLite using Pyodide and xeus-python.
@@ -30,13 +30,11 @@ Planned modifications include:
 - Introducing alternative browser-native implementations for selected machine learning tasks.
 - Documenting differences in functionality, performance, and compatibility.
 
-These modifications may vary between chapters.
-
-At this stage, the project is in early development, and no adapted D2L chapters have been published.
+The adapted sections are listed in the README and published at https://decitre.github.io/d2l2/. Each one's notebook lists the specific changes made to it.
 
 ## Attribution of Adapted Chapters
 
-Each adapted chapter should retain or provide:
+The notebook of each adapted section opens with a header cell that provides:
 
 1. A reference to the corresponding original D2L chapter.
 2. Identification of the upstream source revision.
@@ -44,7 +42,7 @@ Each adapted chapter should retain or provide:
 4. A description of substantive modifications.
 5. Applicable license information.
 
-Adapted educational content derived from D2L will be distributed under the terms of CC BY-SA 4.0.
+Adapted educational content derived from D2L is distributed under the terms of CC BY-SA 4.0.
 
 ## Source Code and Third-Party Materials
 
@@ -54,11 +52,15 @@ Before incorporating such materials, d2l2 will review their applicable licenses 
 
 The CC BY-SA 4.0 designation for adapted book content does not automatically apply to independently developed software or separately licensed third-party materials.
 
+Code adapted from D2L's sample code is used under its MIT-0 license. d2l2's own source code (the `d2l2` package, build scripts and tests) is licensed under the Apache License 2.0; see `LICENSE`.
+
 ## Independence
 
 d2l2 is not an official edition of Dive into Deep Learning.
 
 It is not affiliated with, sponsored by, or endorsed by the original D2L authors or maintainers.
+
+"D2L" abbreviates the book's title, *Dive into Deep Learning*. d2l2 is not affiliated with D2L Corporation or its products.
 
 The original work and its associated rights remain with their respective authors and copyright holders.
 

@@ -60,7 +60,17 @@ HTML
 (cd content && find . -name '*.ipynb' | sed 's|^\./||' | sort) | while read -r nb; do
   echo "  <li><code>$nb</code>: <a href=\"xeus/lab/index.html?path=$nb\">xeus-python</a>, <a href=\"pyodide/lab/index.html?path=$nb\">Pyodide</a></li>"
 done >> "$PUBLIC/index.html"
-echo "</ul>" >> "$PUBLIC/index.html"
+cat >> "$PUBLIC/index.html" <<'HTML'
+</ul>
+<footer>
+<p>Adapted from <a href="https://d2l.ai/"><i>Dive into Deep Learning</i></a> by Aston Zhang, Zachary C. Lipton, Mu Li,
+Alexander J. Smola and contributors. Adapted book text:
+<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>; each notebook lists its source and changes.
+d2l2 code: <a href="https://github.com/decitre/d2l2/blob/main/LICENSE">Apache License 2.0</a>.</p>
+<p>Not affiliated with or endorsed by the D2L authors, or by D2L Corporation.
+Source: <a href="https://github.com/decitre/d2l2">github.com/decitre/d2l2</a>.</p>
+</footer>
+HTML
 touch "$PUBLIC/.nojekyll"
 
 jl-forge self-host "$PUBLIC" --cache-dir "$CACHE/self-host"

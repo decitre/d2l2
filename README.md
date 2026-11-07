@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/decitre/d2l2/main/logo.png"
+  <img src="https://raw.githubusercontent.com/decitre/d2l2/main/d2l2.svg"
        alt="d2l2 — Dive into Deep Learning in JupyterLite"
        width="600">
 </p>
@@ -129,7 +129,7 @@ The original Dive into Deep Learning book content is distributed under the [Crea
 
 Adapted educational content derived from D2L will retain the applicable attribution and ShareAlike requirements.
 
-Source code and third-party materials may be subject to separate licenses. These will be reviewed and their required notices preserved before redistribution.
+d2l2's own source code (the `d2l2` package, build scripts and tests) is licensed under the [Apache License 2.0][apache]. Third-party materials may be subject to separate licenses; these will be reviewed and their required notices preserved before redistribution.
 
 See [CONTENT-LICENSE.md][license-url] and [NOTICE.md][notice] for licensing and attribution details.
 
@@ -171,3 +171,4 @@ Please share suggestions, bug reports, and use cases through [GitHub Issues][iss
 [cc-by-sa]: https://creativecommons.org/licenses/by-sa/4.0/
 [notice]: NOTICE.md
 [issues]: https://github.com/decitre/d2l2/issues
+[apache]: LICENSE
