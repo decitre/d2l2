@@ -1,6 +1,6 @@
 # Roadmap
 
-divelet-ml aims to make [Dive into Deep Learning (D2L)](https://d2l.ai/)
+divelet-ml aims to make [Dive into Deep Learning](https://d2l.ai/)
 accessible through JupyterLite while preserving the educational structure,
 mathematical explanations, learning objectives, and exercises of the original
 textbook.
@@ -18,15 +18,15 @@ GitHub Actions tests, builds and deploys the site on every push to `main`.
 
 **Status: In progress**
 
-The first phase evaluates the feasibility of adapting D2L for browser-native
+The first phase evaluates the feasibility of adapting the book for browser-native
 Python execution.
 
 The PyTorch edition serves as the primary implementation reference.
 
 ### Tasks
 
-- [x] Establish an initial upstream D2L revision.
-- [x] Develop a static analysis tool for D2L Markdown sources.
+- [x] Establish an initial upstream revision of the book.
+- [x] Develop a static analysis tool for the book's Markdown sources.
 - [x] Identify framework-specific code variants.
 - [x] Classify chapters by estimated adaptation difficulty.
 - [x] Identify initial candidate chapters.
@@ -36,7 +36,7 @@ The PyTorch edition serves as the primary implementation reference.
 
 ### Initial Assessment
 
-The initial audit was performed against D2L commit:
+The initial audit was performed against the book's commit:
 
 `23d7a5aecceee57d1292c56e90cce307f183bb0a`
 
@@ -87,7 +87,7 @@ Objectives:
 [`content/03_linear-regression/03.03_synthetic-regression-data.ipynb`](content/03_linear-regression/03.03_synthetic-regression-data.ipynb),
 validated like *Array Operations*. It introduces the `divelet_ml` package
 ([`src/divelet_ml`](src/divelet_ml/__init__.py)), divelet-ml's NumPy counterpart of the `d2l`
-library: `DataModule`, `save_hyperparameters` and `add_to_class` from D2L,
+library: `DataModule`, `save_hyperparameters` and `add_to_class` from the book,
 and `ArrayLoader` in place of a framework's data loader. As in the original,
 the data are unseeded and differ between runs.
 
@@ -178,7 +178,7 @@ depend exclusively on exact numerical outputs.
 **Status: Planned**
 
 After validating the initial chapters, progressively extend coverage to
-additional D2L topics.
+additional topics of the book.
 
 Potential areas include:
 
@@ -220,7 +220,7 @@ pretrained models.
 
 Throughout development, divelet-ml will prioritize:
 
-1. **Educational fidelity:** Preserve the concepts and progression of D2L.
+1. **Educational fidelity:** Preserve the concepts and progression of the book.
 2. **Browser-native execution:** Avoid requiring a remote computation server.
 3. **Simplicity:** Prefer NumPy and lightweight dependencies where practical.
 4. **Transparency:** Document implementation differences and limitations.
@@ -235,21 +235,21 @@ divelet-ml is an independent adaptation of
 [Dive into Deep Learning](https://github.com/d2l-ai/d2l-en).
 
 It is not an official edition and is not affiliated with or endorsed by the
-original D2L authors or maintainers.
+book's original authors or maintainers.
 
 See [NOTICE.md](NOTICE.md) and [CONTENT-LICENSE.md](CONTENT-LICENSE.md)
 for attribution and licensing information.
 
 ### Outreach
 
-Present divelet-ml to the D2L maintainers and readers once there is enough to show:
+Present divelet-ml to the book's maintainers and readers once there is enough to show:
 at least Chapter 2 (Preliminaries) adapted, the upstream code licenses verified
 (Phase 1), and the site published.
 
 - [ ] Open an issue on `d2l-ai/d2l-en` presenting divelet-ml to the maintainers:
-  what it is, that it is independent and unendorsed, and how it attributes D2L.
+  what it is, that it is independent and unendorsed, and how it attributes the book.
   Ask whether they would welcome a link from the book.
-- [ ] Reply in the [D2L forum](https://discuss.d2l.ai/c/english-version/5)
+- [ ] Reply in the [book's forum](https://discuss.d2l.ai/c/english-version/5)
   thread of each adapted section with a link to its divelet-ml notebook, rather than
   opening a new topic.
 

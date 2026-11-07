@@ -13,13 +13,13 @@
 
 **divelet for ML: Dive into Deep Learning, adapted for JupyterLite.**
 
-divelet-ml is an experimental, browser-native adaptation of the Jupyter notebooks that accompany the book [*Dive into Deep Learning*][d2l-site] ("D2L" in the text below), designed to make its educational content and interactive examples accessible through [JupyterLite][jupyterlite] without requiring a local Python installation or a remote computation server.
+divelet-ml is an experimental, browser-native adaptation of the Jupyter notebooks that accompany the book [*Dive into Deep Learning*][d2l-site] ("the book" below), designed to make its educational content and interactive examples accessible through [JupyterLite][jupyterlite] without requiring a local Python installation or a remote computation server.
 
-The project aims to preserve D2L's chapter structure, mathematical explanations, learning objectives, and exercises while adapting its framework-dependent Python implementations for execution directly in the browser.
+The project aims to preserve the book's chapter structure, mathematical explanations, learning objectives, and exercises while adapting its framework-dependent Python implementations for execution directly in the browser.
 
 **Project status:** Early development. Compatibility assessment is underway. Adapted sections run in the browser with no installation. A section link opens its notebook with the xeus-python kernel; **[p]** opens it with Pyodide instead.
 
-| Section | D2L original |
+| Section | Original |
 |---|---|
 | 1 Introduction (no code) | [d2l.ai][d2l-1] |
 | [2.1 Data Manipulation][xeus-2.1] [\[p\]][pyodide-2.1] | [d2l.ai][d2l-2.1] |
@@ -31,7 +31,7 @@ Build the site locally with `./build.sh` (needs uv and micromamba).
 
 ## Python package
 
-The notebooks use `divelet_ml`, a small NumPy counterpart of D2L's `d2l` library. The site's browser kernels already include it. To use it elsewhere:
+The notebooks use `divelet_ml`, a small NumPy counterpart of the book's `d2l` library. The site's browser kernels already include it. To use it elsewhere:
 
 ```bash
 pip install divelet-ml
@@ -41,7 +41,7 @@ pip install divelet-ml
 import divelet_ml as d2l
 ```
 
-It provides `add_to_class`, `HyperParameters` and `DataModule`, adapted from D2L's `d2l/torch.py`, and `ArrayLoader`, which yields minibatches of NumPy arrays in place of PyTorch's `DataLoader`. The package grows only as adapted chapters need more of it. Its code is licensed under the Apache License 2.0; the notebooks are not part of the package.
+It provides `add_to_class`, `HyperParameters` and `DataModule`, adapted from the book's `d2l/torch.py`, and `ArrayLoader`, which yields minibatches of NumPy arrays in place of PyTorch's `DataLoader`. The package grows only as adapted chapters need more of it. Its code is licensed under the Apache License 2.0; the notebooks are not part of the package.
 
 ## Motivation
 
@@ -55,7 +55,7 @@ The objective is not to reproduce the entire deep learning framework ecosystem i
 
 ## Design Principles
 
-- **Educational fidelity:** Preserve D2L's explanations, mathematical formulations, learning objectives, and exercises wherever possible.
+- **Educational fidelity:** Preserve the book's explanations, mathematical formulations, learning objectives, and exercises wherever possible.
 - **Browser-native execution:** Run examples entirely in the browser without requiring a remote Python kernel.
 - **NumPy first:** Prefer NumPy implementations when they adequately illustrate the underlying concepts.
 - **Framework independence:** Avoid unnecessary dependencies on full deep learning frameworks.
@@ -89,11 +89,11 @@ For selected chapters involving modern language models or inference, divelet-ml 
 
 lmLite provides Python access to browser-native machine learning inference.
 
-This integration is optional and is not intended to replace the mathematical and algorithmic foundations of D2L.
+This integration is optional and is not intended to replace the mathematical and algorithmic foundations of the book.
 
 ## Compatibility Assessment
 
-An initial static audit of the D2L source repository has been developed to identify:
+An initial static audit of the book's source repository has been developed to identify:
 
 - Framework-specific implementations and dependencies.
 - Candidate chapters for direct adaptation.
@@ -105,13 +105,13 @@ The audit distinguishes static compatibility estimates from actual execution res
 
 **Static analysis does not establish that a chapter runs successfully in JupyterLite.** Browser execution and educational fidelity must be validated separately.
 
-The initial audit references D2L commit:
+The initial audit references the book's commit:
 
 `23d7a5aecceee57d1292c56e90cce307f183bb0a`
 
 ## Initial Development Plan
 
-The first phase focuses on three representative D2L sections:
+The first phase focuses on three representative sections of the book:
 
 | Section | Focus | Status |
 |---|---|---|
@@ -131,9 +131,9 @@ See [ROADMAP.md][roadmap] for further details.
 
 divelet-ml is an independent adaptation of the original [Dive into Deep Learning][d2l-repo] project.
 
-It is not an official D2L edition and is not affiliated with or endorsed by the original authors.
+It is not an official edition of the book and is not affiliated with or endorsed by the original authors.
 
-The project intends to preserve the educational contributions of D2L while adapting selected implementations for browser-native execution.
+The project intends to preserve the educational contributions of the book while adapting selected implementations for browser-native execution.
 
 Adapted chapters will identify their original sources and document substantive modifications.
 
@@ -141,7 +141,7 @@ Adapted chapters will identify their original sources and document substantive m
 
 The original Dive into Deep Learning book content is distributed under the [Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa].
 
-Adapted educational content derived from D2L will retain the applicable attribution and ShareAlike requirements.
+Adapted educational content derived from the book will retain the applicable attribution and ShareAlike requirements.
 
 divelet-ml's own source code (the `divelet_ml` package, build scripts and tests) is licensed under the [Apache License 2.0][apache]. Third-party materials may be subject to separate licenses; these will be reviewed and their required notices preserved before redistribution.
 
@@ -156,7 +156,7 @@ divelet-ml is an experimental project exploring browser-native deep learning edu
 Feedback is particularly welcome on:
 
 - The educational usefulness of framework-independent implementations.
-- The fidelity of NumPy adaptations to the original D2L examples.
+- The fidelity of NumPy adaptations to the book's original examples.
 - JupyterLite compatibility, performance, and runtime limitations.
 - Opportunities for browser-native machine learning beyond traditional Python frameworks.
 

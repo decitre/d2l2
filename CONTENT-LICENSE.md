@@ -3,7 +3,7 @@
 ## Educational Content
 
 Educational content in **divelet-ml** that is adapted from
-[Dive into Deep Learning (D2L)](https://d2l.ai/) is licensed under the
+[Dive into Deep Learning](https://d2l.ai/) is licensed under the
 **Creative Commons Attribution-ShareAlike 4.0 International License
 (CC BY-SA 4.0)**.
 
@@ -53,14 +53,14 @@ See [NOTICE.md](NOTICE.md) for attribution and modification notices.
 
 ## Scope of This License
 
-CC BY-SA 4.0 applies to educational material derived from D2L that is
+CC BY-SA 4.0 applies to educational material derived from the book that is
 covered by the original book-content license, including adapted explanations,
 mathematical discussions, and exercises.
 
 It does not automatically apply to:
 
 - Independently developed source code.
-- Source code incorporated from D2L under a separate software license.
+- Source code incorporated from the book's repository under a separate software license.
 - Third-party illustrations, images, or other assets.
 - Datasets or pretrained models distributed under separate terms.
 - Dependencies used to execute the notebooks.
@@ -69,7 +69,7 @@ These materials remain subject to their respective licenses.
 
 ## Source Code
 
-The original D2L repository includes executable examples and software
+The book's original repository includes executable examples and software
 components that may be governed by licensing terms distinct from those
 applicable to the educational text.
 
@@ -82,13 +82,13 @@ software license to all files in the repository.
 
 ## Attribution and Modifications
 
-Adapted chapters will identify their original D2L sources, provide appropriate
+Adapted chapters will identify their original sources in the book, provide appropriate
 attribution, and describe substantive changes.
 
 The original authors retain their rights in the original work.
 
 divelet-ml is an independent adaptation and is not affiliated with or endorsed
-by the original D2L authors or maintainers.
+by the book's original authors or maintainers.
 
 ## Disclaimer
 

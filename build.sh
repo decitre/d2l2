@@ -68,7 +68,7 @@ cat >> "$PUBLIC/index.html" <<'HTML'
 Alexander J. Smola and contributors. Adapted book text:
 <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>; each notebook lists its source and changes.
 divelet-ml code: <a href="https://github.com/decitre/divelet-ml/blob/main/LICENSE">Apache License 2.0</a>.</p>
-<p>Not affiliated with or endorsed by the D2L authors, or by D2L Corporation.
+<p>Not affiliated with or endorsed by the book's authors, or by D2L Corporation.
 Source: <a href="https://github.com/decitre/divelet-ml">github.com/decitre/divelet-ml</a>.</p>
 </footer>
 HTML

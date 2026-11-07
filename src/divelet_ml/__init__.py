@@ -1,6 +1,6 @@
 """divelet-ml's NumPy counterpart of the `d2l` library, imported as `import divelet_ml as d2l`.
 
-`add_to_class`, `HyperParameters` and `DataModule` are adapted from D2L's `d2l/torch.py`
+`add_to_class`, `HyperParameters` and `DataModule` are adapted from `d2l/torch.py` in Dive into Deep Learning
 (https://github.com/d2l-ai/d2l-en, commit 23d7a5aecceee57d1292c56e90cce307f183bb0a),
 Copyright 2019 Amazon.com, Inc. or its affiliates, MIT-0 license (LICENSE-SAMPLECODE).
 Only what adapted chapters use is here.
