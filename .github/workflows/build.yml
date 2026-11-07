@@ -35,9 +35,18 @@ jobs:
         run: uv run --group test pytest tests/test_divelet_ml.py tests/test_notebooks.py -v
       - name: Build xeus-python and Pyodide sites
         run: ./build.sh
+      - name: Install WebKit for the iPad smoke test
+        run: uv run --group browser playwright install --with-deps webkit
       - name: Browser smoke test
-        # Uses the runner's preinstalled Google Chrome; a failure blocks deployment.
+        # Desktop Chrome (preinstalled on the runner) and WebKit as an iPad; a failure blocks deployment.
         run: uv run --group browser pytest tests/smoke_test.py -v
+      - name: Upload screenshots of notebooks that did not finish
+        if: failure()
+        uses: actions/upload-artifact@v7
+        with:
+          name: smoke-failures
+          path: workspace/smoke-failures/
+          if-no-files-found: ignore
       - uses: actions/upload-pages-artifact@v5
         with:
           path: workspace/public

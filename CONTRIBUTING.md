@@ -2,7 +2,7 @@
 
 ## Setup
 
-You need [uv][uv]. Building the site also needs [micromamba][micromamba], and the browser smoke test needs Google Chrome.
+You need [uv][uv]. Building the site also needs [micromamba][micromamba], and the browser smoke test needs Google Chrome plus Playwright's WebKit (`uv run --group browser playwright install webkit`, once).
 
 ```bash
 git clone https://github.com/decitre/divelet-ml.git
@@ -23,7 +23,7 @@ uv run --group test pytest tests/test_divelet_ml.py tests/test_notebooks.py -v
 # build the xeus-python and Pyodide sites into workspace/public/
 ./build.sh
 
-# run every notebook in both sites in headless Chrome (after build.sh)
+# run every notebook in both sites in headless Chrome and in WebKit as an iPad (after build.sh)
 uv run --group browser pytest tests/smoke_test.py -v
 ```
 
