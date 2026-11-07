@@ -10,7 +10,7 @@ PUBLIC="$WORKSPACE/public"
 # Kept between builds (CI caches it): xeus environments and Pyodide/self-hosted downloads.
 CACHE="${JL_FORGE_CACHE:-$HOME/.cache/jl-forge}"
 APPS=(--apps lab --apps notebooks --apps tree)
-JL_FORGE="jl-forge==0.5.0"
+JL_FORGE="jl-forge==0.6.0"
 
 venv() {  # venv <dir> <packages...>: create a build venv with jl-forge and jupyterlite
   local dir="$1"; shift
@@ -58,7 +58,7 @@ cat > "$PUBLIC/index.html" <<'HTML'
 <ul>
 HTML
 (cd content && find . -name '*.ipynb' | sed 's|^\./||' | sort) | while read -r nb; do
-  echo "  <li><code>$nb</code>: <a href=\"xeus/lab/index.html?path=$nb\">xeus-python</a>, <a href=\"pyodide/lab/index.html?path=$nb\">Pyodide</a></li>"
+  echo "  <li><code>$nb</code>: <a href=\"xeus/notebooks/index.html?path=$nb\">xeus-python</a>, <a href=\"pyodide/notebooks/index.html?path=$nb\">Pyodide</a></li>"
 done >> "$PUBLIC/index.html"
 cat >> "$PUBLIC/index.html" <<'HTML'
 </ul>
