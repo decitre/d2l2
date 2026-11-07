@@ -13,11 +13,6 @@
      id="title">Divelet ML — Deep learning, in your browser</title>
   <desc
      id="desc">A smiling tablet wearing a blue diving mask above ocean waves, beside the Divelet wordmark.</desc>
-  <style
-     id="dark-mode">@media (prefers-color-scheme: dark) {
-  #g10, #rect2 { fill: #e6edf3 }
-  #circle2 { fill: #031330 }
-}</style>
   <defs
      id="defs1">
     <clipPath
@@ -39,7 +34,7 @@
        width="495"
        height="617"
        rx="86"
-       fill="#031330"
+       fill="#008c80"
        id="rect2" />
     <circle
        cx="358"
@@ -122,7 +117,7 @@
     </g>
   </g>
   <g
-     fill="#031330"
+     fill="#008c80"
      font-family="Arial Rounded MT Bold, Nunito, Arial, sans-serif"
      id="g10">
     <path
