@@ -14,7 +14,34 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  test:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2 # v10.3.3
+      - name: Run divelet-ml package tests and notebooks in CPython
+        # 3.11 is the oldest Python requires-python allows; 3.13 is what both browser kernels run.
+        # uv installs each interpreter; --isolated gives each run its own temporary environment.
+        run: |
+          for version in 3.11 3.13; do
+            echo "::group::Python $version"
+            uv run --isolated --python "$version" --group test pytest tests/test_divelet_ml.py tests/test_notebooks.py -v
+            echo "::endgroup::"
+          done
+      - name: Coverage
+        # The package tests only: notebooks run in a separate kernel process, which coverage doesn't see.
+        run: uv run --python 3.13 --group test pytest tests/test_divelet_ml.py --cov --cov-report=xml --cov-report=term-missing
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v7
+        with:
+          files: ./coverage.xml
+          flags: python
+          disable_search: true
+          fail_ci_if_error: true
+          token: ${{ secrets.CODECOV_TOKEN }}
+
   build:
+    needs: test
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v7
@@ -31,19 +58,6 @@ jobs:
           path: ~/.cache/jl-forge
           key: jl-forge-${{ hashFiles('pyproject.toml', 'build.sh') }}
           restore-keys: jl-forge-
-      - name: Run divelet-ml package tests and notebooks in CPython
-        # Coverage counts the package tests only: the notebooks run in a separate kernel process.
-        run: >-
-          uv run --group test pytest tests/test_divelet_ml.py tests/test_notebooks.py -v
-          --cov --cov-report=xml --cov-report=term-missing
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v7
-        with:
-          files: ./coverage.xml
-          flags: python
-          disable_search: true
-          fail_ci_if_error: true
-          token: ${{ secrets.CODECOV_TOKEN }}
       - name: Build xeus-python and Pyodide sites
         run: ./build.sh
       - name: Install WebKit for the iPad smoke test
