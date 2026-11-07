@@ -32,7 +32,18 @@ jobs:
           key: jl-forge-${{ hashFiles('pyproject.toml', 'build.sh') }}
           restore-keys: jl-forge-
       - name: Run divelet-ml package tests and notebooks in CPython
-        run: uv run --group test pytest tests/test_divelet_ml.py tests/test_notebooks.py -v
+        # Coverage counts the package tests only: the notebooks run in a separate kernel process.
+        run: >-
+          uv run --group test pytest tests/test_divelet_ml.py tests/test_notebooks.py -v
+          --cov --cov-report=xml --cov-report=term-missing
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v7
+        with:
+          files: ./coverage.xml
+          flags: python
+          disable_search: true
+          fail_ci_if_error: true
+          token: ${{ secrets.CODECOV_TOKEN }}
       - name: Build xeus-python and Pyodide sites
         run: ./build.sh
       - name: Install WebKit for the iPad smoke test

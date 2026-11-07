@@ -3,3 +3,5 @@
 workspace/
 __pycache__/
 *.egg-info/
+coverage.xml
+.coverage

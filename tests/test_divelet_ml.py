@@ -1,4 +1,5 @@
 import numpy as np
+import pytest
 
 import divelet_ml as d2l
 
@@ -26,3 +27,27 @@ def test_save_hyperparameters():
     data = Data(1)
     assert (data.a, data.b) == (1, 2) and not hasattr(data, '_hidden')
     assert data.hparams == {'a': 1, 'b': 2}
+
+
+def test_add_to_class():
+    class A:
+        pass
+
+    @d2l.add_to_class(A)
+    def double(self, x):
+        return 2 * x
+
+    assert A().double(3) == 6
+
+
+def test_data_module_dataloaders():
+    data = d2l.DataModule()
+    assert data.hparams == {'root': '../data', 'num_workers': 4}
+    with pytest.raises(NotImplementedError):
+        data.train_dataloader()
+
+    class Data(d2l.DataModule):
+        def get_dataloader(self, train):
+            return 'train' if train else 'val'
+
+    assert (Data().train_dataloader(), Data().val_dataloader()) == ('train', 'val')

@@ -3,6 +3,7 @@
      width="600">
 
 [![Build site][ci-badge]][ci-url]
+[![Coverage][codecov-badge]][codecov-url]
 [![Try xeus-python][xeus-badge]][xeus-url]
 [![Try Pyodide][pyodide-badge]][pyodide-url]
 [![Content: CC BY-SA 4.0][license-badge]][license-url]
@@ -161,6 +162,8 @@ Please share suggestions, bug reports, and use cases through [GitHub Issues][iss
 
 [ci-badge]: https://github.com/decitre/divelet-ml/actions/workflows/build.yml/badge.svg
 [ci-url]: https://github.com/decitre/divelet-ml/actions/workflows/build.yml
+[codecov-badge]: https://img.shields.io/codecov/c/github/decitre/divelet-ml/main?flag=python&label=Coverage&logo=codecov
+[codecov-url]: https://codecov.io/gh/decitre/divelet-ml
 [xeus-url]: https://decitre.github.io/divelet-ml/xeus/lab/index.html?path=02_preliminaries/02.01_ndarray.ipynb
 [pyodide-url]: https://decitre.github.io/divelet-ml/pyodide/lab/index.html?path=02_preliminaries/02.01_ndarray.ipynb
 [xeus-badge]: https://img.shields.io/badge/try-xeus--python-f7dc1e.svg?logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ni43IDQ2LjciPgogIDxwYXRoCiAgICBmaWxsPSIjNDBCM0MzIgogICAgZD0iTTUgMGMyLjUuOCA0LjUgMiA0LjYgMi4xIDEuOSAxLjMgMy42IDMuMSA0LjggNS4xLjQuNiA1LjIgNy44IDguNiAxMi45LS44IDEuMi0xLjUgMi4zLTIuMSAzLjEgMC0uMS0uMS0uMS0uMS0uMkMxNy42IDE3LjkgMTEuNCA4LjYgMTEgNy45Yy0uOS0xLjMtMi0yLjUtMy41LTMuNCAwIDAtMS41LTEtMy41LTEuNkMzLjIgMi42IDEuOCAyLjQgMCAyLjJ2NDIuNGMxLjgtLjIgMy4yLS40IDQtLjcgMi0uNiAzLjUtMS42IDMuNS0xLjYgMS41LTEgMi43LTIuMiAzLjUtMy40LjQtLjcgNi42LTkuOSAxMC4xLTE1LjJDMjQgMTkuMSAzMS40IDguMSAzMS45IDcuM2MxLjItMiAyLjktMy44IDQuOC01LjEgMC0uMSAyLjEtMS4zIDQuNi0yLjFMNDEuOCAwSDV6CiAgICAgICBNNDYuNyAyLjJjLTEuOC4yLTMuMi40LTQgLjctMi4xLjYtMy42IDEuNi0zLjYgMS42LTEuNS45LTIuNiAyLjEtMy41IDMuNC0uNC43LTYuNiA5LjktMTAuMSAxNS4yLTIuOSA0LjQtMTAuMyAxNS41LTEwLjggMTYuMi0xLjIgMi0yLjkgMy44LTQuOCA1LjEgMCAuMS0yLjEgMS4zLTQuNiAyLjFsLS41LjFoMzYuOGwtLjQtLjFjLTIuNS0uOC00LjUtMi00LjYtMi4xLTEuOS0xLjMtMy42LTMuMS00LjgtNS4xLS40LS42LTUuMi03LjgtOC42LTEyLjkuOC0xLjIgMS41LTIuMyAyLjEtMy4xIDAgLjEuMS4xLjEuMiAzLjUgNS4zIDkuNyAxNC41IDEwLjEgMTUuMi45IDEuMyAyIDIuNSAzLjUgMy40IDAgMCAxLjUgMSAzLjUgMS42LjguMyAyLjIuNSA0IC43VjIuMnoiCiAgLz4KPC9zdmc+Cgo=
