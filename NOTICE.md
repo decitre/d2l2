@@ -1,5 +1,8 @@
 # Attribution and Modification Notices
 
+divelet-ml
+Copyright 2026 Emmanuel Decitre
+
 ## Original Work
 
 **Dive into Deep Learning (D2L)** is an open-source interactive textbook developed by its original authors and contributors.
@@ -53,6 +56,10 @@ Before incorporating such materials, divelet-ml will review their applicable lic
 The CC BY-SA 4.0 designation for adapted book content does not automatically apply to independently developed software or separately licensed third-party materials.
 
 Code adapted from D2L's sample code is used under its MIT-0 license. divelet-ml's own source code (the `divelet_ml` package, build scripts and tests) is licensed under the Apache License 2.0; see `LICENSE`.
+
+## Name and Logo
+
+The divelet-ml name and logo (`divelet-ml.svg`) are not covered by the Apache License 2.0 or CC BY-SA 4.0. © 2026 Emmanuel Decitre. All rights reserved. You may use the unmodified logo to refer to the divelet-ml project.
 
 ## Independence
 

@@ -1,3 +1,9 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/decitre/divelet-ml/main/divelet-ml.svg"
+       alt="Divelet ML — Deep learning, in your browser"
+       width="600">
+</p>
+
 [![Build site][ci-badge]][ci-url]
 [![Try xeus-python][xeus-badge]][xeus-url]
 [![Try Pyodide][pyodide-badge]][pyodide-url]
@@ -7,7 +13,7 @@
 
 **divelet for ML: Dive into Deep Learning, adapted for JupyterLite.**
 
-divelet-ml is an experimental, browser-native adaptation of [Dive into Deep Learning (D2L)][d2l-site], designed to make its educational content and interactive examples accessible through [JupyterLite][jupyterlite] without requiring a local Python installation or a remote computation server.
+divelet-ml is an experimental, browser-native adaptation of the Jupyter notebooks that accompany the book [*Dive into Deep Learning*][d2l-site] ("D2L" in the text below), designed to make its educational content and interactive examples accessible through [JupyterLite][jupyterlite] without requiring a local Python installation or a remote computation server.
 
 The project aims to preserve D2L's chapter structure, mathematical explanations, learning objectives, and exercises while adapting its framework-dependent Python implementations for execution directly in the browser.
 
@@ -122,6 +128,8 @@ The original Dive into Deep Learning book content is distributed under the [Crea
 Adapted educational content derived from D2L will retain the applicable attribution and ShareAlike requirements.
 
 divelet-ml's own source code (the `divelet_ml` package, build scripts and tests) is licensed under the [Apache License 2.0][apache]. Third-party materials may be subject to separate licenses; these will be reviewed and their required notices preserved before redistribution.
+
+The divelet-ml name and logo (`divelet-ml.svg`) are not covered by the Apache License 2.0 or CC BY-SA 4.0. © 2026 Emmanuel Decitre. All rights reserved. You may use the unmodified logo to refer to the divelet-ml project.
 
 See [CONTENT-LICENSE.md][license-url] and [NOTICE.md][notice] for licensing and attribution details.
 

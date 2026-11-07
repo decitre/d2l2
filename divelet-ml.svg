@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2164" height="727" viewBox="0 0 2164 727" role="img" aria-labelledby="title desc">
+  <title id="title">Divelet ML — Deep learning, in your browser</title>
+  <desc id="desc">A smiling tablet wearing a blue diving mask above ocean waves, beside the Divelet wordmark.</desc>
+  <defs>
+    <clipPath id="screen"><rect x="155" y="128" width="405" height="504" rx="30"/></clipPath>
+  </defs>
+  <g id="tablet">
+    <rect x="109" y="64" width="495" height="617" rx="86" fill="#031330"/>
+    <circle cx="358" cy="100" r="14" fill="#fff"/>
+    <rect x="155" y="128" width="405" height="504" rx="30" fill="#fff"/>
+    <g clip-path="url(#screen)">
+      <path d="M145 523 C227 447 280 461 363 505 S488 551 570 486 V642 H145Z" fill="#0085d0"/>
+      <path d="M145 551 C245 475 299 536 372 559 C408 571 440 574 474 560 C433 597 384 587 328 566 C256 538 214 502 145 568Z" fill="#fff"/>
+    </g>
+    <rect x="95" y="253" width="108" height="68" rx="25" fill="#00b7a7"/>
+    <rect x="503" y="253" width="113" height="68" rx="25" fill="#00b7a7"/>
+    <path d="M281 191 H435 C503 191 545 233 545 291 C545 345 509 369 463 369 C417 369 398 307 358 307 C318 307 298 369 251 369 C205 369 169 345 169 291 C169 233 212 191 281 191Z" fill="#fff" stroke="#0085d0" stroke-width="32" stroke-linejoin="round"/>
+    <g fill="none" stroke="#031330" stroke-width="18" stroke-linecap="round">
+      <path d="M244 286 C253 255 291 255 306 286"/>
+      <path d="M412 286 C423 255 461 255 475 286"/>
+      <path d="M318 391 C335 423 374 423 394 391"/>
+    </g>
+    <g fill="#00b7a7"><circle cx="505" cy="425" r="29"/><circle cx="469" cy="482" r="22"/></g>
+  </g>
+  <g fill="#031330" font-family="Arial Rounded MT Bold, Nunito, Arial, sans-serif">
+    <text id="wordmark" x="661" y="474" font-size="290" font-weight="900" letter-spacing="-8" textLength="1400" lengthAdjust="spacingAndGlyphs">Divelet ML</text>
+    <text id="tagline" x="673" y="611" font-size="88" font-weight="700" textLength="1388" lengthAdjust="spacingAndGlyphs">Deep learning, in your browser</text>
+  </g>
+</svg>
