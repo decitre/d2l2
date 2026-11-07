@@ -89,3 +89,6 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v5
+        with:
+          # Pages sometimes takes longer than the default 10 minutes after the file sync.
+          timeout: 1800000
