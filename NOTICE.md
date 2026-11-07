@@ -10,7 +10,7 @@
 - **Book content license:** Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
 - **License:** https://creativecommons.org/licenses/by-sa/4.0/
 
-The initial d2l2 compatibility assessment used the following upstream revision:
+The initial divelet-ml compatibility assessment used the following upstream revision:
 
 `23d7a5aecceee57d1292c56e90cce307f183bb0a`
 
@@ -18,7 +18,7 @@ https://github.com/d2l-ai/d2l-en/commit/23d7a5aecceee57d1292c56e90cce307f183bb0a
 
 ## Nature of the Adaptation
 
-**d2l2** is an independent, browser-native adaptation of Dive into Deep Learning for JupyterLite.
+**divelet-ml** is an independent, browser-native adaptation of Dive into Deep Learning for JupyterLite.
 
 The project aims to preserve the original book's educational structure, mathematical explanations, learning objectives, and exercises while adapting framework-dependent implementations for execution in browser-native Python environments.
 
@@ -30,7 +30,7 @@ Modifications, which vary between chapters, include:
 - Introducing alternative browser-native implementations for selected machine learning tasks.
 - Documenting differences in functionality, performance, and compatibility.
 
-The adapted sections are listed in the README and published at https://decitre.github.io/d2l2/. Each one's notebook lists the specific changes made to it.
+The adapted sections are listed in the README and published at https://decitre.github.io/divelet-ml/. Each one's notebook lists the specific changes made to it.
 
 ## Attribution of Adapted Chapters
 
@@ -48,22 +48,22 @@ Adapted educational content derived from D2L is distributed under the terms of C
 
 The licensing of executable code, illustrations, datasets, and other third-party materials may differ from that of the book's educational content.
 
-Before incorporating such materials, d2l2 will review their applicable licenses and preserve required copyright notices, attribution, and license terms.
+Before incorporating such materials, divelet-ml will review their applicable licenses and preserve required copyright notices, attribution, and license terms.
 
 The CC BY-SA 4.0 designation for adapted book content does not automatically apply to independently developed software or separately licensed third-party materials.
 
-Code adapted from D2L's sample code is used under its MIT-0 license. d2l2's own source code (the `d2l2` package, build scripts and tests) is licensed under the Apache License 2.0; see `LICENSE`.
+Code adapted from D2L's sample code is used under its MIT-0 license. divelet-ml's own source code (the `divelet_ml` package, build scripts and tests) is licensed under the Apache License 2.0; see `LICENSE`.
 
 ## Independence
 
-d2l2 is not an official edition of Dive into Deep Learning.
+divelet-ml is not an official edition of Dive into Deep Learning.
 
 It is not affiliated with, sponsored by, or endorsed by the original D2L authors or maintainers.
 
-"D2L" abbreviates the book's title, *Dive into Deep Learning*. d2l2 is not affiliated with D2L Corporation or its products.
+"D2L" abbreviates the book's title, *Dive into Deep Learning*. divelet-ml is not affiliated with D2L Corporation or its products.
 
 The original work and its associated rights remain with their respective authors and copyright holders.
 
 ## Project Repository
 
-https://github.com/decitre/d2l2
+https://github.com/decitre/divelet-ml

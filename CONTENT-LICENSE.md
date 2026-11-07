@@ -2,7 +2,7 @@
 
 ## Educational Content
 
-Educational content in **d2l2** that is adapted from
+Educational content in **divelet-ml** that is adapted from
 [Dive into Deep Learning (D2L)](https://d2l.ai/) is licensed under the
 **Creative Commons Attribution-ShareAlike 4.0 International License
 (CC BY-SA 4.0)**.
@@ -41,7 +41,7 @@ The original educational material is from:
 - Authors and contributors: As credited in the original project
 - Original content license: CC BY-SA 4.0
 
-The initial d2l2 compatibility assessment references upstream commit:
+The initial divelet-ml compatibility assessment references upstream commit:
 
 `23d7a5aecceee57d1292c56e90cce307f183bb0a`
 
@@ -73,10 +73,10 @@ The original D2L repository includes executable examples and software
 components that may be governed by licensing terms distinct from those
 applicable to the educational text.
 
-Before incorporating or adapting such code, d2l2 will verify the applicable
+Before incorporating or adapting such code, divelet-ml will verify the applicable
 license and preserve any required copyright notices and attribution.
 
-A separate software license may be introduced for original d2l2 code.
+Original divelet-ml code is licensed under the Apache License 2.0; see `LICENSE`.
 Until then, this document should not be interpreted as granting a blanket
 software license to all files in the repository.
 
@@ -87,11 +87,11 @@ attribution, and describe substantive changes.
 
 The original authors retain their rights in the original work.
 
-d2l2 is an independent adaptation and is not affiliated with or endorsed
+divelet-ml is an independent adaptation and is not affiliated with or endorsed
 by the original D2L authors or maintainers.
 
 ## Disclaimer
 
 This document summarizes the intended licensing treatment of educational
-content in d2l2. It does not replace the full text of CC BY-SA 4.0 or
+content in divelet-ml. It does not replace the full text of CC BY-SA 4.0 or
 override the licensing terms of individual third-party materials.

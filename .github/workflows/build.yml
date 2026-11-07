@@ -31,8 +31,8 @@ jobs:
           path: ~/.cache/jl-forge
           key: jl-forge-${{ hashFiles('pyproject.toml', 'build.sh') }}
           restore-keys: jl-forge-
-      - name: Run d2l2 package tests and notebooks in CPython
-        run: uv run --group test pytest tests/test_d2l2.py tests/test_notebooks.py -v
+      - name: Run divelet-ml package tests and notebooks in CPython
+        run: uv run --group test pytest tests/test_divelet_ml.py tests/test_notebooks.py -v
       - name: Build xeus-python and Pyodide sites
         run: ./build.sh
       - name: Browser smoke test

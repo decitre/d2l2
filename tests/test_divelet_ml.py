@@ -1,6 +1,6 @@
 import numpy as np
 
-import d2l2 as d2l
+import divelet_ml as d2l
 
 
 def test_array_loader_covers_every_row_once():

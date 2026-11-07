@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Build the d2l2 JupyterLite sites into workspace/public/{xeus,pyodide}. Requires uv and micromamba.
+# Build the divelet-ml JupyterLite sites into workspace/public/{xeus,pyodide}. Requires uv and micromamba.
 # Adapted from jl-forge's examples/demo/build.sh. Each kernel builds in its own venv: jupyter lite
 # copies every installed labextension, so a shared venv would put both kernels in both sites.
 set -euo pipefail
@@ -27,8 +27,8 @@ PATH="$WORKSPACE/venv-xeus/bin:$PATH"
 cp -R content "$WORKSPACE/content-xeus"
 jl-forge notebooks "$WORKSPACE/content-xeus" --strip
 XEUS_PREFIX=$(jl-forge xeus-env --micromamba --cache-dir "$CACHE/xeus" --pyproject pyproject.toml)
-# The d2l2 package, mounted from source into the kernel's site-packages.
-MOUNTS=$(jl-forge xeus-mount src/d2l2 --prefix "$XEUS_PREFIX")
+# The divelet_ml package, mounted from source into the kernel's site-packages.
+MOUNTS=$(jl-forge xeus-mount src/divelet_ml --prefix "$XEUS_PREFIX")
 EMPACK_CONFIG=$(jl-forge xeus-pack-config --out "$WORKSPACE/empack.yml")
 (cd "$WORKSPACE" && jupyter lite build "${APPS[@]}" --contents "$WORKSPACE/content-xeus" --output-dir "$PUBLIC/xeus" --lite-dir lite-xeus \
   --XeusAddon.prefix="$XEUS_PREFIX" \
@@ -40,9 +40,9 @@ echo "== Pyodide site"
 venv "$WORKSPACE/venv-pyodide" jupyterlite-pyodide-kernel==0.7.0
 PATH="$WORKSPACE/venv-pyodide/bin:$PATH"
 cp -R content "$WORKSPACE/content-pyodide"
-# The d2l2 package: one wheel and install.py at the contents root serve notebooks in every subdirectory.
+# The divelet_ml package: one wheel and install.py at the contents root serve notebooks in every subdirectory.
 uv build -q --wheel --out-dir "$WORKSPACE/content-pyodide" .
-jl-forge pyodide-install --pyproject pyproject.toml --package-name d2l2 --wheel-dir "$WORKSPACE/content-pyodide"
+jl-forge pyodide-install --pyproject pyproject.toml --package-name divelet_ml --wheel-dir "$WORKSPACE/content-pyodide"
 jl-forge notebooks "$WORKSPACE/content-pyodide" --strip --pyodide-install
 jl-forge pyodide-wheels --pyproject pyproject.toml --cache-dir "$CACHE" --out-dir "$WORKSPACE/lite-pyodide/pypi"
 # Self-host Pyodide, pruned to the kernel's startup packages and pyproject's dependencies (NumPy).
@@ -53,8 +53,8 @@ PYODIDE_DIST=$(jl-forge pyodide-dist --pyproject pyproject.toml --cache-dir "$CA
 cat > "$PUBLIC/index.html" <<'HTML'
 <!doctype html>
 <meta charset="utf-8">
-<title>d2l2</title>
-<h1>d2l2 — Dive into Deep Learning in JupyterLite</h1>
+<title>divelet-ml</title>
+<h1>divelet-ml — Dive into Deep Learning in JupyterLite</h1>
 <ul>
 HTML
 (cd content && find . -name '*.ipynb' | sed 's|^\./||' | sort) | while read -r nb; do
@@ -66,9 +66,9 @@ cat >> "$PUBLIC/index.html" <<'HTML'
 <p>Adapted from <a href="https://d2l.ai/"><i>Dive into Deep Learning</i></a> by Aston Zhang, Zachary C. Lipton, Mu Li,
 Alexander J. Smola and contributors. Adapted book text:
 <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>; each notebook lists its source and changes.
-d2l2 code: <a href="https://github.com/decitre/d2l2/blob/main/LICENSE">Apache License 2.0</a>.</p>
+divelet-ml code: <a href="https://github.com/decitre/divelet-ml/blob/main/LICENSE">Apache License 2.0</a>.</p>
 <p>Not affiliated with or endorsed by the D2L authors, or by D2L Corporation.
-Source: <a href="https://github.com/decitre/d2l2">github.com/decitre/d2l2</a>.</p>
+Source: <a href="https://github.com/decitre/divelet-ml">github.com/decitre/divelet-ml</a>.</p>
 </footer>
 HTML
 touch "$PUBLIC/.nojekyll"

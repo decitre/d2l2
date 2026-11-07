@@ -1,4 +1,4 @@
-"""d2l2's NumPy counterpart of the `d2l` library, imported as `import d2l2 as d2l`.
+"""divelet-ml's NumPy counterpart of the `d2l` library, imported as `import divelet_ml as d2l`.
 
 `add_to_class`, `HyperParameters` and `DataModule` are adapted from D2L's `d2l/torch.py`
 (https://github.com/d2l-ai/d2l-en, commit 23d7a5aecceee57d1292c56e90cce307f183bb0a),

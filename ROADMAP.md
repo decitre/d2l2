@@ -1,6 +1,6 @@
 # Roadmap
 
-d2l2 aims to make [Dive into Deep Learning (D2L)](https://d2l.ai/)
+divelet-ml aims to make [Dive into Deep Learning (D2L)](https://d2l.ai/)
 accessible through JupyterLite while preserving the educational structure,
 mathematical explanations, learning objectives, and exercises of the original
 textbook.
@@ -11,7 +11,7 @@ assessment and a small set of representative chapters.
 **Current status:** Early development. Static compatibility analysis has been
 performed. Two sections are adapted, 2.1 *Data Manipulation* and 3.3
 *Synthetic Regression Data*. They run in JupyterLite with both the Pyodide and
-xeus-python kernels, on the site published at <https://decitre.github.io/d2l2/>.
+xeus-python kernels, on the site published at <https://decitre.github.io/divelet-ml/>.
 GitHub Actions tests, builds and deploys the site on every push to `main`.
 
 ## Phase 1 — Compatibility Assessment
@@ -85,8 +85,8 @@ Objectives:
 
 **Status:** Adapted as
 [`content/03_linear-regression/03.03_synthetic-regression-data.ipynb`](content/03_linear-regression/03.03_synthetic-regression-data.ipynb),
-validated like *Array Operations*. It introduces the `d2l2` package
-([`src/d2l2`](src/d2l2/__init__.py)), d2l2's NumPy counterpart of the `d2l`
+validated like *Array Operations*. It introduces the `divelet_ml` package
+([`src/divelet_ml`](src/divelet_ml/__init__.py)), divelet-ml's NumPy counterpart of the `d2l`
 library: `DataModule`, `save_hyperparameters` and `add_to_class` from D2L,
 and `ArrayLoader` in place of a framework's data loader. As in the original,
 the data are unseeded and differ between runs.
@@ -135,7 +135,7 @@ Establish a reproducible browser-native learning environment.
 
 ### Tasks
 
-- [x] Configure a JupyterLite distribution for d2l2.
+- [x] Configure a JupyterLite distribution for divelet-ml.
 - [x] Integrate the Pyodide kernel.
 - [x] Integrate the xeus-python kernel.
 - [ ] Establish dependency and package-management conventions.
@@ -143,7 +143,7 @@ Establish a reproducible browser-native learning environment.
 - [x] Provide a reproducible local build process (`build.sh`, using
       [jl-forge](https://github.com/decitre/jl-forge)).
 - [x] Publish a browser-accessible demonstration
-      (<https://decitre.github.io/d2l2/>, deployed by GitHub Actions).
+      (<https://decitre.github.io/divelet-ml/>, deployed by GitHub Actions).
 - [ ] Document browser and runtime limitations.
 
 Pyodide and xeus-python will be evaluated separately. Compatibility with one
@@ -163,7 +163,7 @@ executable and educationally consistent.
 - [x] Introduce browser-based execution tests (`tests/smoke_test.py`: every
       notebook runs in both kernels, with no request to other hosts and no
       browser console error).
-- [x] Integrate tests into GitHub Actions (`tests/test_d2l2.py` and
+- [x] Integrate tests into GitHub Actions (`tests/test_divelet_ml.py` and
       `tests/test_notebooks.py` in CPython, then the browser smoke test on the
       built site, before deploying).
 - [x] Track compatibility separately for Pyodide and xeus-python (the smoke
@@ -218,7 +218,7 @@ pretrained models.
 
 ## Project Principles
 
-Throughout development, d2l2 will prioritize:
+Throughout development, divelet-ml will prioritize:
 
 1. **Educational fidelity:** Preserve the concepts and progression of D2L.
 2. **Browser-native execution:** Avoid requiring a remote computation server.
@@ -231,7 +231,7 @@ Throughout development, d2l2 will prioritize:
 
 ## Upstream and Attribution
 
-d2l2 is an independent adaptation of
+divelet-ml is an independent adaptation of
 [Dive into Deep Learning](https://github.com/d2l-ai/d2l-en).
 
 It is not an official edition and is not affiliated with or endorsed by the
@@ -242,18 +242,18 @@ for attribution and licensing information.
 
 ### Outreach
 
-Present d2l2 to the D2L maintainers and readers once there is enough to show:
+Present divelet-ml to the D2L maintainers and readers once there is enough to show:
 at least Chapter 2 (Preliminaries) adapted, the upstream code licenses verified
 (Phase 1), and the site published.
 
-- [ ] Open an issue on `d2l-ai/d2l-en` presenting d2l2 to the maintainers:
+- [ ] Open an issue on `d2l-ai/d2l-en` presenting divelet-ml to the maintainers:
   what it is, that it is independent and unendorsed, and how it attributes D2L.
   Ask whether they would welcome a link from the book.
 - [ ] Reply in the [D2L forum](https://discuss.d2l.ai/c/english-version/5)
-  thread of each adapted section with a link to its d2l2 notebook, rather than
+  thread of each adapted section with a link to its divelet-ml notebook, rather than
   opening a new topic.
 
 ## Feedback
 
 Suggestions, compatibility reports, and contributions are welcome through
-[GitHub Issues](https://github.com/decitre/d2l2/issues).
+[GitHub Issues](https://github.com/decitre/divelet-ml/issues).
