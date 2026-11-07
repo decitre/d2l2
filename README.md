@@ -19,11 +19,13 @@ The project aims to preserve D2L's chapter structure, mathematical explanations,
 
 **Project status:** Early development. Compatibility assessment is underway. Adapted sections run in the browser with no installation. A section link opens its notebook with the xeus-python kernel; **[p]** opens it with Pyodide instead.
 
-| Section | Source | D2L original |
-|---|---|---|
-| 1 Introduction | no code, read the original | [d2l.ai][d2l-1] |
-| [2.1 Data Manipulation][xeus-2.1] [\[p\]][pyodide-2.1] | [notebook][nb-2.1] | [d2l.ai][d2l-2.1] |
-| [3.3 Synthetic Regression Data][xeus-3.3] [\[p\]][pyodide-3.3] | [notebook][nb-3.3] | [d2l.ai][d2l-3.3] |
+| Section | D2L original |
+|---|---|
+| 1 Introduction (no code) | [d2l.ai][d2l-1] |
+| [2.1 Data Manipulation][xeus-2.1] [\[p\]][pyodide-2.1] | [d2l.ai][d2l-2.1] |
+| [3.3 Synthetic Regression Data][xeus-3.3] [\[p\]][pyodide-3.3] | [d2l.ai][d2l-3.3] |
+
+The notebooks' sources are in [`content/`][content].
 
 Build the site locally with `./build.sh` (needs uv and micromamba).
 
@@ -174,13 +176,12 @@ Please share suggestions, bug reports, and use cases through [GitHub Issues][iss
 [d2l-site]: https://d2l.ai/
 [jupyterlite]: https://jupyterlite.readthedocs.io/
 [d2l-1]: https://d2l.ai/chapter_introduction/index.html
-[nb-2.1]: https://github.com/decitre/divelet-ml/blob/main/content/02_preliminaries/02.01_ndarray.ipynb
+[content]: https://github.com/decitre/divelet-ml/tree/main/content
 [xeus-2.1]: https://decitre.github.io/divelet-ml/xeus/notebooks/index.html?path=02_preliminaries/02.01_ndarray.ipynb
 [pyodide-2.1]: https://decitre.github.io/divelet-ml/pyodide/notebooks/index.html?path=02_preliminaries/02.01_ndarray.ipynb
 [d2l-2.1]: https://d2l.ai/chapter_preliminaries/ndarray.html
 [xeus-3.3]: https://decitre.github.io/divelet-ml/xeus/notebooks/index.html?path=03_linear-regression/03.03_synthetic-regression-data.ipynb
 [pyodide-3.3]: https://decitre.github.io/divelet-ml/pyodide/notebooks/index.html?path=03_linear-regression/03.03_synthetic-regression-data.ipynb
-[nb-3.3]: https://github.com/decitre/divelet-ml/blob/main/content/03_linear-regression/03.03_synthetic-regression-data.ipynb
 [d2l-3.3]: https://d2l.ai/chapter_linear-regression/synthetic-regression-data.html
 [transformers-js]: https://huggingface.co/docs/transformers.js/
 [lmlite]: https://github.com/decitre/lmlite
