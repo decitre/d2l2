@@ -6,11 +6,21 @@ build-backend = "hatchling.build"
 name = "divelet-ml"
 version = "0.1.0"
 description = "Dive into Deep Learning, adapted for JupyterLite"
+readme = "README.md"
 license = "Apache-2.0"  # code; adapted D2L content is CC BY-SA 4.0 (CONTENT-LICENSE.md)
 # Pyodide kernel 0.7.0 runs Python 3.13. The browser kernels get the divelet_ml package and [project.dependencies].
 requires-python = ">=3.11"
+authors = [{ name = "decitre" }]
 dependencies = ["numpy"]
+
+[project.urls]
+Homepage = "https://github.com/decitre/divelet-ml"
+Documentation = "https://decitre.github.io/divelet-ml/"
+Issues = "https://github.com/decitre/divelet-ml/issues"
 
 [dependency-groups]
 browser = ["pytest>=8", "playwright>=1.50"]
 test = ["pytest>=8", "nbclient>=0.10", "ipykernel>=6"]
+
+[tool.hatch.build.targets.sdist]
+include = ["/src", "/tests", "/LICENSE", "/NOTICE.md", "/CONTENT-LICENSE.md"]

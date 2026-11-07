@@ -1,0 +1,61 @@
+name: Release
+
+on:
+  release:
+    types: [published]  # a draft release does not trigger this
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: Publish this version to PyPI (irreversible)
+        type: boolean
+        required: true
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pypi-release
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Build and check distributions
+        run: |
+          python -m pip install --upgrade build twine
+          python -m build
+          python -m twine check --strict dist/*
+      - name: Verify installed package
+        run: |
+          python -m pip install dist/*.whl
+          cd "${RUNNER_TEMP}"
+          python -c "from importlib.metadata import version; import divelet_ml; print(version('divelet-ml'))"
+      - uses: actions/upload-artifact@v7
+        with:
+          name: distributions
+          path: dist/*
+          if-no-files-found: error
+
+  publish:
+    needs: build
+    # a release run checks out its tag, not main
+    if: ${{ github.event_name == 'release' || (inputs.publish && github.ref == 'refs/heads/main') }}
+    runs-on: ubuntu-24.04
+    environment:
+      name: pypi
+      url: https://pypi.org/project/divelet-ml/
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/download-artifact@v8
+        with:
+          name: distributions
+          path: dist/
+      - name: Publish to PyPI using trusted publishing
+        uses: pypa/gh-action-pypi-publish@release/v1
