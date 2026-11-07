@@ -6,6 +6,8 @@ Copyright 2019 Amazon.com, Inc. or its affiliates, MIT-0 license (LICENSE-SAMPLE
 Only what adapted chapters use is here.
 """
 
+__version__ = "0.1.0"
+
 import inspect
 
 import numpy as np

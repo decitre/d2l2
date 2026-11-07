@@ -35,7 +35,7 @@ jobs:
         run: |
           python -m pip install dist/*.whl
           cd "${RUNNER_TEMP}"
-          python -c "from importlib.metadata import version; import divelet_ml; print(version('divelet-ml'))"
+          python -c "from importlib.metadata import version; import divelet_ml; assert divelet_ml.__version__ == version('divelet-ml')"
       - uses: actions/upload-artifact@v7
         with:
           name: distributions
