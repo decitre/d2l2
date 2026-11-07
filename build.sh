@@ -55,10 +55,11 @@ cat > "$PUBLIC/index.html" <<'HTML'
 <meta charset="utf-8">
 <title>divelet-ml</title>
 <h1>divelet-ml — Dive into Deep Learning in JupyterLite</h1>
+<p>A notebook link opens it with the xeus-python kernel; <b>[p]</b> opens it with Pyodide instead.</p>
 <ul>
 HTML
 (cd content && find . -name '*.ipynb' | sed 's|^\./||' | sort) | while read -r nb; do
-  echo "  <li><code>$nb</code>: <a href=\"xeus/notebooks/index.html?path=$nb\">xeus-python</a>, <a href=\"pyodide/notebooks/index.html?path=$nb\">Pyodide</a></li>"
+  echo "  <li><a href=\"xeus/notebooks/index.html?path=$nb\"><code>$nb</code></a> <a href=\"pyodide/notebooks/index.html?path=$nb\">[p]</a></li>"
 done >> "$PUBLIC/index.html"
 cat >> "$PUBLIC/index.html" <<'HTML'
 </ul>
