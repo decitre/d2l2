@@ -1,8 +1,6 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/decitre/divelet-ml/main/divelet-ml.svg"
-       alt="Divelet ML — Deep learning, in your browser"
-       width="600">
-</p>
+<img src="https://raw.githubusercontent.com/decitre/divelet-ml/main/divelet-ml.svg"
+     alt="Divelet ML — Deep learning, in your browser"
+     width="600">
 
 [![Build site][ci-badge]][ci-url]
 [![Try xeus-python][xeus-badge]][xeus-url]
